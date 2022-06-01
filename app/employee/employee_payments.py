@@ -1,5 +1,6 @@
 from datetime import datetime
-from exceptions import DayOfWeekNotFound, InputBadFormat
+from exceptions.exceptions import DayOfWeekNotFound, InputBadFormat
+
 
 DAYS_OF_WEEK = {'MO': 1, 'TU': 2, 'WE': 3, 'TH': 4, 'FR': 5, 'SA': 6, 'SU': 7}
 
@@ -128,7 +129,7 @@ class EmployeePayment():
         end_time = time_splitted[1]
         return day, start_time, end_time
 
-    def output_employee_payment(self):
+    def output_employee_payment(self) -> None:
         """
         Print message with total amout payment for an employee
         """
